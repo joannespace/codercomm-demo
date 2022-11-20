@@ -49,9 +49,7 @@ function UserTable({ users }) {
                 Job Title
               </TableCell>
 
-              <TableCell
-                sx={{ display: { xs: "none", sm: "table-cell" }, width: "20%" }}
-              >
+              <TableCell sx={{ display: { xs: "20%", md: "table-cell" } }}>
                 Status
               </TableCell>
               <TableCell>Action</TableCell>
@@ -99,16 +97,11 @@ function UserTable({ users }) {
                   </TableCell>
                   <TableCell
                     align="left"
-                    sx={{ display: { xs: "none", md: "table-cell" } }}
+                    sx={{ display: { xs: "none", sm: "table-cell" } }}
                   >
                     {status}
                   </TableCell>
-                  <TableCell
-                    align="left"
-                    sx={{ display: { xs: "none", md: "table-cell" } }}
-                  >
-                    {action}
-                  </TableCell>
+                  <TableCell align="left">{action}</TableCell>
                 </TableRow>
               );
             })}

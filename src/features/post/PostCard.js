@@ -41,7 +41,8 @@ function PostCard({ post }) {
 
   const handleDeletePost = (postId) => {
     handleMenuClose();
-    dispatch(deletePost({ postId, userId }));
+    let confirmation = window.confirm("Your action can not be recalled", "");
+    if (confirmation) dispatch(deletePost({ postId, userId }));
   };
 
   const [openEdit, setOpenEdit] = useState(false);
